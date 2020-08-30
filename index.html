@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>R&W Assignment</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link href="./static/css/reset.css" rel="stylesheet">
+    <link href="./static/css/index.css" rel="stylesheet">
+</head>
+<body>
+<header id="topBar">
+    <div class="bar barAbs">
+        <div class="barLine barLineBlack"></div>
+        <img class="barLogo" src="./static/assets/randw.svg" alt="R & W"/>
+    </div>
+    <div class="bar barRel">
+        <h1><span class="bolder darker">#</span>Corona<span class="darker">phobia</span></h1>
+    </div>
+</header>
+<main>
+
+    <!-- Vis -->
+    <div id="slab1" class="slab">
+        <div id="fixture1A" class="fixture fixtureA">
+            <div class="topicContainer">
+                <h3>Q:</h3>
+                <h4>Do you feel <span class="color colorA">safe</span>, <span class="color colorB">unsafe</span> or
+                    <span class="color colorC">unsure</span> ...</h4>
+            </div>
+        </div>
+        <div id="fixture2A" class="fixture fixtureA">
+            <div class="topicContainer">
+                <h3>Q2:</h3>
+                <h4>Do you think you would feel comfortable voting in person in November?</h4>
+            </div>
+        </div>
+        <div id="fixture3A" class="fixture fixtureA">
+            <div class="optionContainer">
+                <p>There are many things you can do still do from home, including <a
+                        href="https://www.usa.gov/absentee-voting">absentee and early voting</a>.</p>
+            </div>
+        </div>
+        <div id="fixture1B" class="fixture fixtureB">
+            <div class="visContainer">
+                <div id="radialVis"></div>
+                <select id="radialSel" onchange="main_updateFilterTarget(this)">
+                    <option value="Election 2016">2016 Election</option>
+                    <option value="Election 2020" selected>2020 Election</option>
+                    <option value="Age">Age</option>
+                    <option value="Gender">Gender</option>
+                    <option value="Region">Region</option>
+                </select>
+                <p id="radialRef">In house poll, 12-Aug-2020.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Narration -->
+    <div id="slide1" class="slide">
+        <div class="side sideA">
+            <div class="contentContainer">
+                <h1>Into the danger zone?</h1>
+                <div class="citeBar">
+                    <img src="./static/assets/cVM.png" alt="Author image" class="Jared Jessup">
+                    <div class="timeCirc">26</div>
+                    <div class="timeCirc">Au</div>
+                    <div class="timeCirc">20</div>
+                </div>
+                <h2>Covid-19 has impacted public spaces in different ways. We'll take a look at the toll on social
+                    confidence now and towards the November presidential election.</h2>
+                <p>After months of wading the coronavirus info stream, many Americans have self-constructed their
+                    own safety measures. We surveyed individuals from different demographics, including age, gender,
+                    region and political lean, in order to better understand how people feel about being present in
+                    commonly peopled places. Though still months away from the election, we also peered into a possible
+                    scenario at polling stations.</p>
+            </div>
+        </div>
+        <div id="side1B" class="side sideB">
+            <div class="imageContainer">
+                <img id="coverArt" src="./static/assets/morning-brew-rhFmpq6pMKU-unsplash.jpg"
+                     alt="Photo by Morning Brew on Unsplash">
+                <a class="coverArtLink">Photo by Morning Brew on Unsplash</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="startSlide" class="slide">
+        <div class="side sideA">
+            <div id="go_outside" class="questionContainer">
+                <h2>Going outside your home at all?</h2>
+                <p>More than in any other activity we surveyed, results indicate that people feel relatively safe
+                    venturing outdoors. Can simply stepping outside be considered a social exercise? It may depend on
+                    whether you live on a 'block' or on a 'street' (the classic urban/rural debate).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_dining_in" class="questionContainer">
+                <h2>Eating at a restaurant or drinking at a bar inside?</h2>
+                <p>If a mask cover, open air, and a 6-foot people shield represent best practice, indoor dining might be
+                    demonstrate the worst (or 'riskiest' according to the CDC). Positions range by age and region, and
+                    individuals who political parties that champion person freedom (Libertarians, Republicans) feel
+                    safest.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_dining_out" class="questionContainer">
+                <h2>Eating at a restaurant or drinking at a bar outside?</h2>
+                <p>Unsurprisingly, confidence rises for outdoor dining, though this survey does not indicate whether the
+                    tables are in a sparse layout. It has been a scorching summer - as fall approaches this may be a
+                    category to watch as diners seek shelter from the cold.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_public_transport" class="questionContainer">
+                <h2>Taking public transportation?</h2>
+                <p>For people who still have to work onsite, public transportation may not be an optional risk,
+                    particularly in urban areas. There is a broad consensus that public transport is not safe, but
+                    interestingly in the population dense North East, higher numbers may indicate that some feel the
+                    worst is over.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_shopping" class="questionContainer">
+                <h2>Going shopping?</h2>
+                <p>It can be hard to break the spirit of the world's #1 consumer economy, even if almost everything can
+                    be purchased online. Even so, many Americans (most notably suporters of President Trump), feel safe
+                    (second to just being outside anywhere) inside stores.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--div class="slide">
+        <div class="side sideA">
+            <div id="go_barber_salon" class="questionContainer">
+                <h2>Going to a barber or hair salon?</h2>
+                <p>Interdum varius sit amet mattis vulputate enim nulla. Et malesuada fames ac turpis egestas integer
+                    eget. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur.</p>
+            </div>
+        </div>
+    </div-->
+
+    <!--div class="slide">
+        <div class="side sideA">
+            <div id="go_friend_handshake" class="questionContainer">
+                <h2>Greeting a friend with a handshake?</h2>
+                <p>Interdum varius sit amet mattis vulputate enim nulla. Et malesuada fames ac turpis egestas integer
+                    eget. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur.</p>
+            </div>
+        </div>
+    </div-->
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_gym" class="questionContainer">
+                <h2>Going to the gym?</h2>
+                <p>Exercise-induced huffing and puffing is a broad concern for most people, but the gym may lean more
+                    into a 'luxury' category for virus libertines that often yields slightly more approval from the
+                    right and from the young.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_friends_house" class="questionContainer">
+                <h2>Visiting a friend’s house?</h2>
+                <p>Isolation has been one of the hardest consequences of a restricted lifestyle, so it is perhaps
+                    understandable that friends still meet, hopefully with some candor about risk. Again we see the
+                    expected reservation from Democrats and those among the most vulnerable to the disease, the
+                    elderly.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_sporting_event" class="questionContainer">
+                <h2>Attending a sporting event?</h2>
+                <p>This question could have been split in two - indoor and outdoor - but whether a packed stadium or
+                    arena, people will be shouting (or cheering - not always are they the same). While there are those
+                    who feel safe, this is probably one of the 'luxuries' that people don't mind watching from home.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_movie_theater" class="questionContainer">
+                <h2>Watching a movie at a movie theater?</h2>
+                <p>Interestingly filling movie theater seats was already a concern even before the pandemic, and now
+                    some films are going straight to the competition: streaming services. People do not feel safe now -
+                    this may become an industry that does not survive the lockdown.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="transSlide" class="slide">
+        <div class="side sideA">
+            <div id="go_flight" class="questionContainer">
+                <h2>Taking a flight?</h2>
+                <p>Airlines are another industry threatened by a severe ticket drop (although major airlines are
+                    receiving massive government support). Anecdotes are mixed: some fliers have praised effective
+                    distancing policies, while others felt frighteningly packed in - making it an experience that leave
+                    potential passengers feeling very uncertain.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_hospital" class="questionContainer">
+                <h2>Going to the hospital for something unrelated to coronavirus?</h2>
+                <p>As a likely destination for those experiencing severe symptoms from the coronavirus, many hospitals
+                    have earned public trust by taking the threat seriously and implementing smart safety measure.
+                    Opinions are split in directions consistent with other public spaces, but the ratio safe to unsafe
+                    is closer to 50 / 50 than other categories.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--div class="slide">
+        <div class="side sideA">
+            <div id="go_travel_neighbor_state" class="questionContainer">
+                <h2>Travelling to a neighboring US State?</h2>
+                <p>Interdum varius sit amet mattis vulputate enim nulla. Et malesuada fames ac turpis egestas integer
+                    eget. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur.</p>
+            </div>
+        </div>
+    </div-->
+
+    <!--div class="slide">
+        <div class="side sideA">
+            <div id="go_travel_another_country" class="questionContainer">
+                <h2>Traveling to another country?</h2>
+                <p>Interdum varius sit amet mattis vulputate enim nulla. Et malesuada fames ac turpis egestas integer
+                    eget. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur.</p>
+            </div>
+        </div>
+    </div-->
+
+    <div class="slide">
+        <div class="side sideA">
+            <div id="go_vote" class="conclusionContainer">
+                <h2>On a scale, 0 to 5:</h2>
+                <ul>
+                    <li id="0_very_uncomfortable" class="go_vote_answers">
+                        <p><span class="bolded">0.</span> Very uncomfortable</p>
+                        <div class="concCirc concCircA"></div>
+                    </li>
+                    <li id="1_uncomfortable" class="go_vote_answers">
+                        <p><span class="bolded">1.</span> Uncomfortable</p>
+                        <div class="concCirc concCircB"></div>
+                    </li>
+                    <li id="2_slightly_uncomfortable" class="go_vote_answers">
+                        <p><span class="bolded">2.</span> Slightly more uncomfortable than comfortable</p>
+                        <div class="concCirc concCircC"></div>
+                    </li>
+                    <li id="3_slightly_comfortable" class="go_vote_answers">
+                        <p><span class="bolded">3.</span> Slightly more comfortable than uncomfortable</p>
+                        <div class="concCirc concCircD"></div>
+                    </li>
+                    <li id="4_comfortable" class="go_vote_answers">
+                        <p><span class="bolded">4.</span> Comfortable</p>
+                        <div class="concCirc concCircE"></div>
+                    </li>
+                    <li id="5_very_comfortable" class="go_vote_answers">
+                        <p><span class="bolded">5.</span> Very comfortable</p>
+                        <div class="concCirc concCircF"></div>
+                    </li>
+                    <li id="dont_know" class="go_vote_answers">
+                        <p><span class="bolded">*</span><span class="italicized"> Don't know</span></p>
+                        <div class="concCirc concCircG"></div>
+                    </li>
+                </ul>
+                <p class="typical">The election is still months away, and there are in-person alternatives. but voters
+                    and policy-makers should closely monitor turnout probability, remembering that the November winner
+                    will be in an important position for guiding the country through the conclusion of the crisis.</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer id="botBar">
+</footer>
+
+<!-- Scripts -->
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="./static/js/scrollControl.js"></script>
+<script src="./static/js/radialVis.js"></script>
+<script src="./static/js/main.js"></script>
+</body>
+</html>

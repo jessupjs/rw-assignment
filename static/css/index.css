@@ -1,0 +1,438 @@
+/* body */
+body {
+    background-color: rgb(252, 250, 248);
+}
+
+/* topBar */
+#topBar {
+    display: flex;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+.bar {
+    display: flex;
+    width: 100vw;
+}
+
+.barAbs {
+    position: absolute;
+}
+
+.barRel {
+    position: relative;
+}
+
+.barAbs .barLine {
+    height: 35px;
+    margin: 0 22px;
+    width: 100%;
+}
+
+.barAbs .barLineBlack {
+    border-bottom: 1px solid black;
+}
+
+.barAbs .barLogo {
+    height: 23px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 23px;
+}
+
+.barRel h1 {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 3px 0 0 28px;
+}
+
+.barRel h1 > span.bolder {
+    font-weight: 900;
+}
+
+.barRel h1 > span.darker {
+    color: rgba(0, 0, 0, 1);
+}
+
+/* slab */
+.slab {
+    display: flex;
+    height: 100vh;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 101;
+}
+
+.fixture {
+    pointer-events: initial;
+    position: absolute;
+    width: 50vw;
+}
+
+.fixtureA {
+    left: 0;
+}
+
+#fixture1A, #fixture2A {
+    top: 0;
+}
+
+#fixture3A {
+    bottom: 0;
+}
+
+.fixtureB {
+    height: 100%;
+    right: 0;
+}
+
+.topicContainer {
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    margin: 45px 0 0 25px;
+    padding: 0 0 10px 15px;
+}
+
+.topicContainer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.topicContainer h4 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 17px 0 0 10px;
+}
+
+.topicContainer h4 > span.color {
+    padding: 0 0 0 0;
+}
+
+.topicContainer h4 > span.colorA {
+    border-bottom: 5px solid rgb(81, 71, 219);
+}
+
+.topicContainer h4 > span.colorB {
+    border-bottom: 5px solid rgb(255,0,0);
+}
+
+.topicContainer h4 > span.colorC {
+    border-bottom: 5px solid rgb(252,201,149);
+}
+
+.optionContainer {
+    background-color: rgb(252, 250, 248);
+    border: 1px solid rgb(255,52,0);
+    display: flex;
+    margin: 0 0 25px 50px;
+    padding: 25px 50px;
+    width: 75%;
+}
+
+.optionContainer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.optionContainer a {
+    border-bottom: 5px solid rgb(116, 36, 227);
+    color: black;
+    padding: 0 0 2px 0;
+    text-decoration: none;
+}
+
+.visContainer {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 50px 0 0 0;
+    position: relative;
+    width: 100%;
+}
+
+#radialVis {
+    position: relative;
+}
+
+.visContainer .hideable {
+    transition: opacity 500ms ease-in-out;
+}
+
+
+.visContainer .hidden {
+    opacity: 0;
+}
+
+#radialSel {
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 0;
+    color: white;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    height: 20px;
+    outline: none;
+    position: absolute;
+    right: 25px;
+    top: 70px;
+    width: 250px;
+}
+
+#radialRef {
+    bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    font-style: italic;
+    position: absolute;
+    right: 25px;
+}
+
+/* slide */
+.slide {
+    display: flex;
+    width: 100vw;
+}
+
+.side {
+    height: 100%;
+    position: relative;
+    width: 50%;
+}
+
+.sideB {
+    height: 100vh;
+}
+
+.imageContainer {
+    height: 95%;
+    margin: 2.5% 0 0 0;
+    position: relative;
+    width: 95%;
+}
+
+.imageContainer img {
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+.imageContainer .coverArtLink {
+    bottom: 8px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 300;
+    position: absolute;
+    right: 10px;
+}
+
+.contentContainer {
+    height: 90%;
+    margin: 0 10% 0 10%;
+    width: 80%;
+}
+
+.contentContainer h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 120%;
+    margin: 17.5vh 0 0 0;
+}
+
+.contentContainer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 400;
+    margin: 30px 0 45px 0;
+}
+
+.contentContainer p {
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 165%;
+    margin: 0 15px 15px 0;
+}
+
+.citeBar {
+    align-items: center;
+    display: flex;
+    margin: 30px 0 30px 0;
+}
+
+.citeBar img {
+    border-radius: 50%;
+    height: 50px;
+    margin: 0 15px 0 0;
+    object-fit: cover;
+    width: 50px;
+}
+
+.citeBar div.timeCirc {
+    align-items: center;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 900;
+    height: 40px;
+    justify-content: center;
+    margin: 0 5px 0 0;
+    padding: 0 0 2px 0;
+    width: 40px
+}
+
+#startSlide {
+    margin: 20vh 0 0 0;
+}
+
+.questionContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 50vh;
+    justify-content: center;
+    opacity: 0.25;
+    padding: 0 0 0 75px;
+    transition: opacity 200ms linear;
+    width: 100%;
+}
+
+.questionContainer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.questionContainer p {
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 165%;
+    margin: 75px 75px 0 50px;
+}
+
+.conclusionContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 50vh;
+    justify-content: center;
+    margin: 25vh 0 0 0;
+    opacity: 1;
+    padding: 0 0 0 75px;
+    transition: opacity 200ms linear;
+    width: 100%;
+}
+
+.conclusionContainer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.conclusionContainer ul {
+    list-style-type: none;
+    margin: 25px 75px 0 50px;
+}
+
+.conclusionContainer li {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 75%;
+}
+
+.conclusionContainer li > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.conclusionContainer p > .bolded {
+    font-weight: bold;
+}
+
+.conclusionContainer p > .italicized {
+    font-style: italic;
+}
+
+
+.conclusionContainer > p {
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 165%;
+    margin: 45px 15px 15px 0;
+}
+
+.concCirc {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+
+.concCircA {
+    background-color: rgb(255,0,0);
+}
+
+.concCircB {
+    background-color: rgb(250,123,123);
+}
+
+.concCircC {
+    background-color: rgb(248,164,164);
+}
+
+.concCircD {
+    background-color: rgb(184,182,224);
+}
+
+.concCircE {
+    background-color: rgb(139,135,208);
+}
+
+.concCircF {
+    background-color: rgb(81, 71, 219);
+}
+
+.concCircG {
+    background-color: rgb(252,201,149);
+}
+
+/* botBar */
+#botBar {
+    background-color: rgba(0, 0, 0, 0.95);
+    height: 50vh;
+    margin: 50vh 0 0 0;
+    width: 100vw;
+}
+
+
+
